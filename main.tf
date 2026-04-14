@@ -1,7 +1,9 @@
 provider "aws" {
   region = var.aws_region
 }
-
+data "aws_ssm_parameter" "latest_ami" {
+  name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
+}
 resource "aws_security_group" "demo_sg" {
   name        = "spacelift-demo-sg"
   description = "Security group from Spacelift variables"
