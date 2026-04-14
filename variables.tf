@@ -13,3 +13,6 @@ variable "egress_ports" {
 variable "allowed_cidr" {
   type = list(string)
 }
+variable "aws_region" {
+  type = string
+}
