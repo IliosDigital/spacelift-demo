@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-south-2"
+  region = var.aws_region
 }
 
 resource "aws_security_group" "demo_sg" {
