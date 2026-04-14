@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-soth-2"
+  region = "ap-south-2"
 }
 
 resource "aws_security_group" "demo_sg" {
