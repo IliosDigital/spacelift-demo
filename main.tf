@@ -36,7 +36,7 @@ resource "aws_security_group" "demo_sg" {
 resource "aws_instance" "demo_server" {
   count                  = var.instance_count
   ami                    = data.aws_ssm_parameter.latest_ami.value
-  instance_type          = "t2.micro"
+  instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.demo_sg.id]
 
   tags = {
